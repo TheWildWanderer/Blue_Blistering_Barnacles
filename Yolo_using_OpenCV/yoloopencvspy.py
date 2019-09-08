@@ -55,6 +55,8 @@ for i in range(len(boxes)):
         color = colors[i]
         cv2.rectangle(img, (x, y), (x + w, y + h), color, 2)
         cv2.putText(img, label, (x, y + 30), font, 3, color, 3)
+        #Additional Line for Gaussian Blur
+        img[y:y+h,x:x+w]=cv2.GaussianBlur(img[y:y+h,x:x+w],(5,5),cv2.BORDER_DEFAULT)
 
 
 cv2.imshow("Image", img)
