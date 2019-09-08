@@ -1,2 +1,4 @@
 # Blue_Blistering_Barnacles
-Contains R&amp;D Projects
+Contains OpenCV Projects
+> YOLOv3 using OpenCV (Object detection)
+> Object Blur
