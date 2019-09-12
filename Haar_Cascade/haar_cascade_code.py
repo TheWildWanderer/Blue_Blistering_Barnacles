@@ -14,7 +14,9 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 faces = face_cascade.detectMultiScale(gray, 1.3, 5)
 #drawing the boxes
 for (x,y,w,h) in faces:
+    label='Human'
     cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
+    cv2.putText(img, label, (x, y ), cv2.FONT_HERSHEY_SIMPLEX,1,(209,80,0,255),0)
     roi_gray = gray[y:y+h, x:x+w]
     roi_color = img[y:y+h, x:x+w]
     #Detecting the eyes
